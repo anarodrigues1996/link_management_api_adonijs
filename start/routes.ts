@@ -5,3 +5,4 @@ Route.get('/', async () => {
 })
 
 Route.get('/api/links', 'LinksController.getAll')
+Route.post('/api/links', 'LinksController.create')
