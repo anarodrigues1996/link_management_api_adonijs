@@ -27,4 +27,9 @@ export default class LinksController {
         return link
     }
 
+    async find({ params })
+    {
+        return await Link.findOrFail(params.id)
+    }
+
 }
