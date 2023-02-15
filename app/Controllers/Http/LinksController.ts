@@ -32,4 +32,16 @@ export default class LinksController {
         return await Link.findOrFail(params.id)
     }
 
+    async delete({ params })
+    {
+        const link = await Link.findOrFail(params.id)
+
+        if(link != null)
+        {
+            await link.delete()
+        }
+
+        return link
+    }
+
 }
