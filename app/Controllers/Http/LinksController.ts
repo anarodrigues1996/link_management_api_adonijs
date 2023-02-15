@@ -12,12 +12,12 @@ export default class LinksController {
 
     async create({ request })
     {   
-        const newPostSchema = schema.create({
+        const createSchema = schema.create({
             title: schema.string(),
             url: schema.string(),
         })
 
-        await request.validate({ schema: newPostSchema })
+        await request.validate({ schema: createSchema })
 
         const link = new Link()
         link.title = request.input("title")
@@ -40,6 +40,24 @@ export default class LinksController {
         {
             await link.delete()
         }
+
+        return link
+    }
+
+    async edit({ params, request })
+    {
+        const createSchema = schema.create({
+            title: schema.string(),
+            url: schema.string(),
+        })
+
+        await request.validate({ schema: createSchema })
+
+        const link = await Link.findOrFail(params.id)
+
+        link.title = request.input("title")
+        link.url = request.input("url")
+        await link.save()
 
         return link
     }
