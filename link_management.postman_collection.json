@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "641c573c-eeb5-4717-a4f5-e9cb2926f994",
+		"name": "link_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/links",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"links"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all links",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/links",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"links"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "375"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 22:30:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"title\": \"yes2\",\n        \"url\": \"www.yes2.com\",\n        \"created_at\": \"2023-02-15T21:30:47.000-01:00\",\n        \"updated_at\": \"2023-02-15T21:30:47.000-01:00\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"yes\",\n        \"url\": \"www.yes.com\",\n        \"created_at\": \"2023-02-15T21:30:20.000-01:00\",\n        \"updated_at\": \"2023-02-15T21:30:20.000-01:00\"\n    },\n    {\n        \"id\": 1,\n        \"title\": \"yes\",\n        \"url\": \"www.yes.com\",\n        \"created_at\": null,\n        \"updated_at\": \"2023-02-15T21:29:24.000-01:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"yes2\",\r\n    \"url\": \"www.yes2.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/links",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"links"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create link",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"yes\",\r\n    \"url\": \"www.yes.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/links",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"links"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "132"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 22:30:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"yes\",\n    \"url\": \"www.yes.com\",\n    \"created_at\": \"2023-02-15T21:30:20.109-01:00\",\n    \"updated_at\": \"2023-02-15T21:30:20.109-01:00\",\n    \"id\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "get one link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/links/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"links",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get one link",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/links/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"links",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "105"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 22:31:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"yes\",\n    \"url\": \"www.yes.com\",\n    \"created_at\": null,\n    \"updated_at\": \"2023-02-15T21:29:24.000-01:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete a link",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/links/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"links",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete a link",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/links/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"links",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "105"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 22:31:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"yes\",\n    \"url\": \"www.yes.com\",\n    \"created_at\": null,\n    \"updated_at\": \"2023-02-15T21:29:24.000-01:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit a link",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"yes\",\r\n    \"url\": \"www.yes.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/links/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"links",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit a link",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"yes\",\r\n    \"url\": \"www.yes.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/links/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"links",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "105"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 22:31:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"yes\",\n    \"url\": \"www.yes.com\",\n    \"created_at\": null,\n    \"updated_at\": \"2023-02-15T21:29:24.000-01:00\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Url",
+			"value": "http://localhost:3333/",
+			"type": "default"
+		}
+	]
+}
