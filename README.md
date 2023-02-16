@@ -29,10 +29,80 @@ Pode testar utilizando o ficheiro collection do Postman
 ```
 
 ### Listar todos os Links
+**Metodo:** GET
+<br>
+**Url:** {{url}}/api/links
+<br>
+**Corpo:**
+```
+ {
+        "id": 4,
+        "title": "yes2",
+        "url": "www.yes2.com",
+        "created_at": "2023-02-15T21:30:47.000-01:00",
+        "updated_at": "2023-02-15T21:30:47.000-01:00"
+    },
+    {
+        "id": 3,
+        "title": "yes",
+        "url": "www.yes.com",
+        "created_at": "2023-02-15T21:30:20.000-01:00",
+        "updated_at": "2023-02-15T21:30:20.000-01:00"
+    },
+    {
+        "id": 1,
+        "title": "yes",
+        "url": "www.yes.com",
+        "created_at": null,
+        "updated_at": "2023-02-15T21:29:24.000-01:00"
+    }
+```
 
 ### Obter um Link
+**Metodo:** GET
+<br>
+**Url:** {{url}}/api/links
+<br>
+**Corpo:**
+```
+{
+    "id": 3,
+    "title": "yes",
+    "url": "www.yes.com",
+    "created_at": "2023-02-15T21:30:20.000-01:00",
+    "updated_at": "2023-02-15T21:30:20.000-01:00"
+}
+```
 
 ### Atualizar Link
+**Metodo:** PUT
+<br>
+**Url:** {{url}}/api/links
+<br>
+**Corpo:**
+```
+{
+    "id": 1,
+    "title": "yes",
+    "url": "www.yes.com",
+    "created_at": null,
+    "updated_at": "2023-02-15T21:29:24.000-01:00"
+}
+```
 
 ### Eliminar Link
 
+**Metodo:** DELETE
+<br>
+**Url:** {{url}}/api/links
+<br>
+**Corpo:**
+```
+{
+    "id": 1,
+    "title": "yes",
+    "url": "www.yes.com",
+    "created_at": null,
+    "updated_at": "2023-02-15T21:29:24.000-01:00"
+}
+```
