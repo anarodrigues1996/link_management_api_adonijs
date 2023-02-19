@@ -31,8 +31,8 @@ Pode testar utilizando o ficheiro collection do Postman
 }
 ```
 <br>
-**Resposta:**
 
+**Resposta:**
 ```
 {
     "id": 3,
@@ -102,8 +102,8 @@ Pode testar utilizando o ficheiro collection do Postman
 }
 ```
 <br>
-**Resposta:**
 
+**Resposta:**
 ```
 {
     "id": 1,
