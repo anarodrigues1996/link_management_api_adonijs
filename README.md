@@ -2,6 +2,9 @@
 Esse é um API simples para gestão de links.
 Foi feito no NodeJS utilizando o framework AdonisJS.
 
+Esse projeto é o backend, sendo o frontend
+está em https://github.com/anarodrigues1996/link_management_frontend_nextjs
+
 ## Setup
 - Faz o clone do projeto
 - Copie o .env.example para .env
