@@ -20,11 +20,23 @@ Pode testar utilizando o ficheiro collection do Postman
 <br>
 **Url:** {{url}}/api/links
 <br>
-**Corpo:**
+**Pedido:**
 ```
 {
     "title": "yes",
     "url": "www.yes.com"
+}
+```
+<br>
+**Resposta:**
+
+```
+{
+    "id": 3,
+    "title": "yes",
+    "url": "www.yes.com",
+    "created_at": "2023-02-15T21:30:20.000-01:00",
+    "updated_at": "2023-02-15T21:30:20.000-01:00"
 }
 ```
 
@@ -33,7 +45,7 @@ Pode testar utilizando o ficheiro collection do Postman
 <br>
 **Url:** {{url}}/api/links
 <br>
-**Corpo:**
+**Resposta:**
 ```
  {
         "id": 4,
@@ -61,9 +73,9 @@ Pode testar utilizando o ficheiro collection do Postman
 ### Obter um Link
 **Metodo:** GET
 <br>
-**Url:** {{url}}/api/links
+**Url:** {{url}}/api/links/3
 <br>
-**Corpo:**
+**Resposta:**
 ```
 {
     "id": 3,
@@ -77,9 +89,18 @@ Pode testar utilizando o ficheiro collection do Postman
 ### Atualizar Link
 **Metodo:** PUT
 <br>
-**Url:** {{url}}/api/links
+**Url:** {{url}}/api/links/1
 <br>
-**Corpo:**
+**Pedido:**
+```
+{
+    "title": "yes",
+    "url": "www.yes.com",
+}
+```
+<br>
+**Resposta:**
+
 ```
 {
     "id": 1,
@@ -94,9 +115,9 @@ Pode testar utilizando o ficheiro collection do Postman
 
 **Metodo:** DELETE
 <br>
-**Url:** {{url}}/api/links
+**Url:** {{url}}/api/links/1
 <br>
-**Corpo:**
+**Resposta:**
 ```
 {
     "id": 1,
