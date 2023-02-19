@@ -1,4 +1,4 @@
-# link management
+# link management api
 Esse é um API simples para gestão de links.
 Foi feito no NodeJS utilizando o framework AdonisJS.
 
